@@ -1,0 +1,7 @@
+2017-10-20 14:59:27 - PHP Notice:  Undefined variable: products in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 153
+2017-10-20 15:01:11 - PHP Notice:  Undefined variable: products_title in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 154
+2017-10-23 10:36:42 - PHP Notice:  Undefined variable: content_left in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\information.tpl on line 38
+2017-10-23 13:06:57 - PHP Notice:  Undefined variable: location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\contact.tpl on line 24
+2017-10-23 13:08:01 - PHP Notice:  Undefined variable: location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\contact.tpl on line 24
+2017-10-23 14:46:51 - PHP Notice:  Undefined variable: button_reset in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\contact.tpl on line 120
+2017-10-23 16:40:28 - PHP Notice:  Undefined variable: route in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_footer.tpl on line 4
