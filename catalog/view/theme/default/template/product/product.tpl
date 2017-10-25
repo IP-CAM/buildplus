@@ -1,10 +1,14 @@
 <?php echo $header; ?>
 <div class="container">
+
+
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
+
+
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -13,7 +17,108 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+
+    <div id="content" class="<?php echo $class; ?>">
+
+
+      <?php echo $content_top; ?>
+      <h2 class="product-title-lg"><?php echo $heading_title; ?></h2>
+
+      <?php if ($thumb || $description) { ?>
+
+      <div class="upper-box-container">
+        <div class="row">
+          <div class="col-sm-6">
+
+            <div class="<?php echo $class; ?>">
+              <?php if ($thumb || $images) { ?>
+              <ul class="thumbnails">
+                <?php if ($thumb) { ?>
+                <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+                <?php } ?>
+                <?php if ($images) { ?>
+                <?php foreach ($images as $image) { ?>
+                <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+                <?php } ?>
+                <?php } ?>
+              </ul>
+              <?php } ?>
+            </div>
+              
+
+          </div>
+
+          <div class="col-sm-6 desc">
+            <?php if ($description) { ?>
+            <?php echo $description; ?>
+            <?php } ?>
+            <?php } ?>
+            <hr>
+
+            <div id="permeable-prod-desc">
+              <?php if ($attribute_groups) { ?>
+                <div>
+                    <?php foreach ($attribute_groups as $attribute_group) { ?>
+                      <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                      <div class="perm-div">
+                        <?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?>
+                        
+                      </div>
+                      <?php } ?>
+                    <?php } ?>
+                </div>
+              <?php } ?>
+            </div>
+
+            <hr>
+
+              <div id="perm-colors">
+                <?php foreach ($options as $option) { ?>
+                <?php if ($option['type'] == 'image') { ?>
+                  <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                    <div id="input-option<?php echo $option['product_option_id']; ?>">
+                      <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                      <div class="radio">
+                          <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail img-responsive" /> 
+                          <div>
+                            <?php echo $option_value['name']; ?>
+                          </div>
+                          <?php if ($option_value['price']) { ?>
+                          (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                          <?php } ?>
+                      </div>
+                      <?php } ?>
+                      <span><a class="link" href="">More ... </a></span>
+                    </div>
+                  </div>
+                <?php } }?>
+
+                  <div class="enquire-btn-box">
+                    <a class="btn enquire-btn">Enquiry Now</a>
+                  </div>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="lower-box-container">
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
       <div class="row">
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -22,30 +127,80 @@
         <?php } else { ?>
         <?php $class = 'col-sm-8'; ?>
         <?php } ?>
-        <div class="<?php echo $class; ?>">
-          <?php if ($thumb || $images) { ?>
-          <ul class="thumbnails">
-            <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-            <?php } ?>
-            <?php if ($images) { ?>
-            <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-            <?php } ?>
-            <?php } ?>
-          </ul>
-          <?php } ?>
+
+          
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
+            <li class="active"><a href="#tab-introduction" data-toggle="tab">
+            <?php echo $tab_introduction; ?></a></li>
             <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_specification; ?></a></li>
             <?php } ?>
-            <?php if ($review_status) { ?>
-            <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
+            <?php if ($tab_gallery) { ?>
+            <li><a href="#tab-gallery" data-toggle="tab"><?php echo $tab_gallery; ?></a></li>
             <?php } ?>
           </ul>
+
+          <!-- INTRODUCTION TAB -->
           <div class="tab-content">
-            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
+
+            <div class="tab-pane active" id="tab-introduction">
+              <div class="center tab-logo">
+                <img src="image/catalog/images/permeable/intro/perm-eco-logo.jpg" class="perm-tab-logo">
+              </div>
+
+              <div class="tab-container">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h5>Cerapaver</h5>
+                    <p> Eco-Friendly Permeable Paver is now available in Singapore.BuiId Plus Private Ltd is pleased to introduce CERAPAVER, a range of totally permeable to Singapore. Cerapaver attained the Green Label mark It has no toxic or hazardous substances in its composition.Cerapaver is made to last for many years due to its unique manufacturing process. Damaged and rejected tiles are recycled, crushed and added with clay to be compressed at 1600 Tonnes, Kilned & fired for 12 hours at 1200c Therefore, Cerapaver has high compressive strength & breaking load (UP to 20KN) Colours of Cerapaver Can last for many years. 
+                    <p>
+
+                    <h5>Key Feature</h5>
+                    <ul class="ul-tabs">
+                      <li>• Helps to i nfiltrate rain & stormwater runoff </li>
+                      <li>• Increases the efficiency Of water management. </li>
+                      <li>• Retains water within its structure, allows evaporation & helps to mitigate "Urban Heat Island Effect"</li>
+                      <li>• Slip resistant (Rll- R12) </li>
+                      <li>• Colourfast, Colours of Cerapaver can last for many years </li>
+                      <li>• Available in 7 attractive colou rs ( Please contact us if colours not stated here)</li>
+                      <li>• Range Of Sizes, include Large format </li>
+                    </ul>
+
+                    <h5>Additional features</h5>
+                    <ul class="ul-tabs">
+                      <li>• Reduce cost of installing drainage </li>
+                      <li>• Allows infiltration into ground and assist in replenishing ground water.</li>
+                      <li>• Removes pollutant such as Nitrates, Phosphate & heavy metal from storm water run-off. </li>
+                      <li>• Provide water supply to trees & Landscape area, reduce flooding </li>
+                      <li>• Absorbs sound and reduce traffic noise due to its porous structure of Cerapaver </li>
+                      <li>• Can be recycled and reused on other sites </li>
+                      <li>• Easy to maintain (power wash when necessary) </li>
+                      <li>• More Cost effective than a Iternative materials</li>
+                    </ul>
+
+                    <h5>Cerapaver are prefect for range of application</h5>
+                    <ul class="ul-tabs">
+                      <li>• Car parks, footpaths, jogging paths, neighbourhood parks & Connectors. public & private plazas/courtyards, pool area, roof terraces, public spaces. Green building projects.</li>
+                      <li>• Driveways for residential homes & multi-dwelling developments </li>
+                      <li>• Commercial & industrial storage facilities</li>
+                      <li>Build Plus Private Ltd has an exclusive agreement with LVDAO Technology Co.,Ltd. to market and supply Eco Friendly Ceramic permeable paver in Singapore as "Cerapaver".</li>
+                    </ul>
+
+
+
+
+                  </div>
+
+                  <div class="col-sm-4">
+                    <img src="image/catalog/images/permeable/intro/1.jpg" class="perm-tab-img">
+                    <br>
+                    <img src="image/catalog/images/permeable/intro/2.jpg" class="perm-tab-img">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
             <?php if ($attribute_groups) { ?>
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">
@@ -67,9 +222,15 @@
               </table>
             </div>
             <?php } ?>
-            <?php if ($review_status) { ?>
-            <div class="tab-pane" id="tab-review">
-              <form class="form-horizontal" id="form-review">
+
+            <?php if ($tab_gallery) { ?>
+            <div class="tab-pane" id="tab-gallery">
+              asdasdsd
+            </div>
+            <?php } ?>
+
+          </div>
+             <!--  <form class="form-horizontal" id="form-review">
                 <div id="review"></div>
                 <h2><?php echo $text_write; ?></h2>
                 <?php if ($review_guest) { ?>
@@ -116,11 +277,11 @@
                 <?php } else { ?>
                 <?php echo $text_login; ?>
                 <?php } ?>
-              </form>
-            </div>
-            <?php } ?>
-          </div>
-        </div>
+              </form> -->
+
+
+
+      </div>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } elseif ($column_left || $column_right) { ?>
@@ -128,6 +289,7 @@
         <?php } else { ?>
         <?php $class = 'col-sm-4'; ?>
         <?php } ?>
+
         <div class="<?php echo $class; ?>">
           <div class="btn-group">
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
@@ -331,7 +493,7 @@
               <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
               <?php } ?>
               <?php } ?>
-              <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
+              <a href="" onclick="$('a[href=\'#tab-gallery\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-gallery\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
             <hr>
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
@@ -343,6 +505,8 @@
       </div>
       <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
+
+
       <div class="row">
         <?php $i = 0; ?>
         <?php foreach ($products as $product) { ?>

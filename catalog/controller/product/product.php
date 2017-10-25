@@ -322,6 +322,9 @@ class ControllerProductProduct extends Controller {
 			$data['entry_good'] = $this->language->get('entry_good');
 			$data['entry_bad'] = $this->language->get('entry_bad');
 
+
+			// $data['entry_name'] = $this->language->get('entry_name');
+
 			$data['button_cart'] = $this->language->get('button_cart');
 			$data['button_wishlist'] = $this->language->get('button_wishlist');
 			$data['button_compare'] = $this->language->get('button_compare');
@@ -333,6 +336,12 @@ class ControllerProductProduct extends Controller {
 			$data['tab_description'] = $this->language->get('tab_description');
 			$data['tab_attribute'] = $this->language->get('tab_attribute');
 			$data['tab_review'] = sprintf($this->language->get('tab_review'), $product_info['reviews']);
+
+
+			$data['tab_introduction'] = $this->language->get('tab_introduction');
+			$data['tab_specification'] = $this->language->get('tab_specification');
+			$data['tab_gallery'] = $this->language->get('tab_gallery');
+
 
 			$data['product_id'] = (int)$this->request->get['product_id'];
 			$data['manufacturer'] = $product_info['manufacturer'];

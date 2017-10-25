@@ -5,3 +5,19 @@
 2017-10-23 13:08:01 - PHP Notice:  Undefined variable: location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\contact.tpl on line 24
 2017-10-23 14:46:51 - PHP Notice:  Undefined variable: button_reset in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\information\contact.tpl on line 120
 2017-10-23 16:40:28 - PHP Notice:  Undefined variable: route in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_footer.tpl on line 4
+2017-10-24 10:13:30 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 26
+2017-10-24 10:20:47 - PHP Notice:  Undefined variable: images in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 34
+2017-10-24 10:20:59 - PHP Notice:  Undefined variable: images in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 34
+2017-10-24 10:22:55 - PHP Notice:  Undefined variable: images in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 34
+2017-10-24 10:31:43 - PHP Notice:  Undefined variable: tab_description in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 34
+2017-10-24 10:31:43 - PHP Notice:  Undefined variable: attribute_groups in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 35
+2017-10-24 10:31:43 - PHP Notice:  Undefined variable: review_status in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 38
+2017-10-24 10:31:43 - PHP Notice:  Undefined variable: attribute_groups in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 44
+2017-10-24 10:31:43 - PHP Notice:  Undefined variable: review_status in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 65
+2017-10-24 15:28:53 - PHP Notice:  Undefined index: attribute_group_id in C:\xampp\htdocs\opencart\buildplus\admin\model\catalog\attribute.php on line 6
+2017-10-24 15:45:38 - PHP Notice:  Undefined variable: text_location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 48
+2017-10-24 15:49:39 - PHP Notice:  Undefined variable: text_location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 48
+2017-10-24 15:49:52 - PHP Notice:  Undefined variable: location in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 48
+2017-10-24 16:54:58 - PHP Notice:  Undefined variable: option in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 73
+2017-10-24 18:09:28 - PHP Notice:  Use of undefined constant specification - assumed 'specification' in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 135
+2017-10-24 18:09:28 - PHP Notice:  Undefined variable: tab in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 135

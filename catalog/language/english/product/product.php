@@ -45,6 +45,11 @@ $_['tab_description']          = 'Description';
 $_['tab_attribute']            = 'Specification';
 $_['tab_review']               = 'Reviews (%s)';
 
+$_['tab_introduction']         = 'Introduction';
+$_['tab_specification']        = 'Specification';
+$_['tab_gallery']              = 'Gallery';
+
+
 // Error
 $_['error_name']               = 'Warning: Review Name must be between 3 and 25 characters!';
 $_['error_text']               = 'Warning: Review Text must be between 25 and 1000 characters!';

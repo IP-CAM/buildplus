@@ -96,7 +96,7 @@ $data['extra_tags'] = $this->document->getExtraTags();
 		$data['product_link'] = $this->url->link('product/category');
 		$data['products_title'] = $this->language->get('products_title');
 		
-		$data['product_permeable_link'] = $this->url->link('product/category&path=59');
+		$data['product_permeable_link'] = $this->url->link('product/product&product_id=53');
 		$data['product_permeable_title'] = $this->language->get('product_permeable_title');
 
 		$status = true;
