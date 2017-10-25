@@ -1,4 +1,13 @@
 <?php echo $header; ?>
+
+<?php
+
+if(isset($_GET)) {
+  $page_route     = $_GET['route'];
+  $product_route  = $_GET['product_id'];
+  if($page_route == "product/product" && $product_route == "53"){ ?>
+
+<!-- PRODUCT PERMEABLE CERAMIC RAVER -->
 <div class="container">
 
 
@@ -56,21 +65,24 @@
             <hr>
 
             <div id="permeable-prod-desc">
-              <?php if ($attribute_groups) { ?>
+
+                <?php if ($attribute_groups) { ?>
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+                <?php if ($attr_id == 3) { ?>
+                <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                 <div>
-                    <?php foreach ($attribute_groups as $attribute_group) { ?>
-                      <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                       <div class="perm-div">
                         <?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?>
                         
                       </div>
-                      <?php } ?>
-                    <?php } ?>
+                <?php } ?>
+                <?php } ?>
                 </div>
-              <?php } ?>
-            </div>
-
-            <hr>
+                <?php } ?>
+                <?php } ?>
+            
+              <hr>
 
               <div id="perm-colors">
                 <?php foreach ($options as $option) { ?>
@@ -98,199 +110,319 @@
                   </div>
 
               </div>
-
+            </div>
           </div>
         </div>
       </div>
 
-
       <div class="lower-box-container">
+        <div class="row">
+          <?php if ($column_left && $column_right) { ?>
+          <?php $class = 'col-sm-6'; ?>
+          <?php } elseif ($column_left || $column_right) { ?>
+          <?php $class = 'col-sm-6'; ?>
+          <?php } else { ?>
+          <?php $class = 'col-sm-8'; ?>
+          <?php } ?>
 
+            
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab-introduction" data-toggle="tab">
+              <?php echo $tab_introduction; ?></a></li>
 
-      </div>
+              <?php if ($attribute_groups) { ?>
+              <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_specification; ?></a></li>
+              <?php } ?>
 
+              <?php if ($tab_gallery) { ?>
+              <li><a href="#tab-gallery" data-toggle="tab"><?php echo $tab_gallery; ?></a></li>
+              <?php } ?>
+            </ul>
 
-
-
-
-
-
-
-
-
-
-      <div class="row">
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-sm-6'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
-        <?php $class = 'col-sm-6'; ?>
-        <?php } else { ?>
-        <?php $class = 'col-sm-8'; ?>
-        <?php } ?>
-
-          
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-introduction" data-toggle="tab">
-            <?php echo $tab_introduction; ?></a></li>
-            <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_specification; ?></a></li>
-            <?php } ?>
-            <?php if ($tab_gallery) { ?>
-            <li><a href="#tab-gallery" data-toggle="tab"><?php echo $tab_gallery; ?></a></li>
-            <?php } ?>
-          </ul>
-
-          <!-- INTRODUCTION TAB -->
-          <div class="tab-content">
-
-            <div class="tab-pane active" id="tab-introduction">
-              <div class="center tab-logo">
-                <img src="image/catalog/images/permeable/intro/perm-eco-logo.jpg" class="perm-tab-logo">
-              </div>
-
-              <div class="tab-container">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h5>Cerapaver</h5>
-                    <p> Eco-Friendly Permeable Paver is now available in Singapore.BuiId Plus Private Ltd is pleased to introduce CERAPAVER, a range of totally permeable to Singapore. Cerapaver attained the Green Label mark It has no toxic or hazardous substances in its composition.Cerapaver is made to last for many years due to its unique manufacturing process. Damaged and rejected tiles are recycled, crushed and added with clay to be compressed at 1600 Tonnes, Kilned & fired for 12 hours at 1200c Therefore, Cerapaver has high compressive strength & breaking load (UP to 20KN) Colours of Cerapaver Can last for many years. 
-                    <p>
-
-                    <h5>Key Feature</h5>
-                    <ul class="ul-tabs">
-                      <li>• Helps to i nfiltrate rain & stormwater runoff </li>
-                      <li>• Increases the efficiency Of water management. </li>
-                      <li>• Retains water within its structure, allows evaporation & helps to mitigate "Urban Heat Island Effect"</li>
-                      <li>• Slip resistant (Rll- R12) </li>
-                      <li>• Colourfast, Colours of Cerapaver can last for many years </li>
-                      <li>• Available in 7 attractive colou rs ( Please contact us if colours not stated here)</li>
-                      <li>• Range Of Sizes, include Large format </li>
-                    </ul>
-
-                    <h5>Additional features</h5>
-                    <ul class="ul-tabs">
-                      <li>• Reduce cost of installing drainage </li>
-                      <li>• Allows infiltration into ground and assist in replenishing ground water.</li>
-                      <li>• Removes pollutant such as Nitrates, Phosphate & heavy metal from storm water run-off. </li>
-                      <li>• Provide water supply to trees & Landscape area, reduce flooding </li>
-                      <li>• Absorbs sound and reduce traffic noise due to its porous structure of Cerapaver </li>
-                      <li>• Can be recycled and reused on other sites </li>
-                      <li>• Easy to maintain (power wash when necessary) </li>
-                      <li>• More Cost effective than a Iternative materials</li>
-                    </ul>
-
-                    <h5>Cerapaver are prefect for range of application</h5>
-                    <ul class="ul-tabs">
-                      <li>• Car parks, footpaths, jogging paths, neighbourhood parks & Connectors. public & private plazas/courtyards, pool area, roof terraces, public spaces. Green building projects.</li>
-                      <li>• Driveways for residential homes & multi-dwelling developments </li>
-                      <li>• Commercial & industrial storage facilities</li>
-                      <li>Build Plus Private Ltd has an exclusive agreement with LVDAO Technology Co.,Ltd. to market and supply Eco Friendly Ceramic permeable paver in Singapore as "Cerapaver".</li>
-                    </ul>
-
-
-
-
-                  </div>
-
-                  <div class="col-sm-4">
-                    <img src="image/catalog/images/permeable/intro/1.jpg" class="perm-tab-img">
-                    <br>
-                    <img src="image/catalog/images/permeable/intro/2.jpg" class="perm-tab-img">
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-
-            <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
+             <!--  <?php if ($attribute_groups) { ?>
                 <?php foreach ($attribute_groups as $attribute_group) { ?>
-                <thead>
-                  <tr>
-                    <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                  <tr>
-                    <td><?php echo $attribute['name']; ?></td>
-                    <td><?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?></td>
-                  </tr>
+                  <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+                    <?php if ($attr_id == 4) { ?>
+                      <tbody>
+                        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                        <tr>
+                          <td><?php echo $attribute['name']; ?></td>
+                          <td><?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        </tr>
+                        <?php } ?>
+                      </tbody>
+                    <?php } else {} ?>
                   <?php } ?>
-                </tbody>
-                <?php } ?>
-              </table>
-            </div>
-            <?php } ?>
+                <?php } ?> -->
 
-            <?php if ($tab_gallery) { ?>
-            <div class="tab-pane" id="tab-gallery">
-              asdasdsd
-            </div>
-            <?php } ?>
+            <div class="tab-content">
 
-          </div>
-             <!--  <form class="form-horizontal" id="form-review">
-                <div id="review"></div>
-                <h2><?php echo $text_write; ?></h2>
-                <?php if ($review_guest) { ?>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+              <!-- INTRODUCTION TAB -->
+              <div class="tab-pane active" id="tab-introduction">
+                <?php if ($attribute_groups) { ?>
+                <?php foreach ($attribute_groups as $attribute_group) { ?>
+                  <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+                    <?php if ($attr_id == 4) { ?>
+                        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                        <?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <?php } ?>
+                    <?php } else {} ?>
+                  <?php } ?>
+                <?php } ?>    
+              </div>
+                <!-- <div class="center tab-logo">
+                  <img src="image/catalog/images/permeable/intro/perm-eco-logo.jpg" class="perm-tab-logo">
+                </div>
+
+                <div class="tab-container">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <h5>Cerapaver</h5>
+                      <p> Eco-Friendly Permeable Paver is now available in Singapore.BuiId Plus Private Ltd is pleased to introduce CERAPAVER, a range of totally permeable to Singapore. Cerapaver attained the Green Label mark It has no toxic or hazardous substances in its composition.Cerapaver is made to last for many years due to its unique manufacturing process. Damaged and rejected tiles are recycled, crushed and added with clay to be compressed at 1600 Tonnes, Kilned & fired for 12 hours at 1200c Therefore, Cerapaver has high compressive strength & breaking load (UP to 20KN) Colours of Cerapaver Can last for many years. 
+                      </p>
+
+                      <h5>Key Feature</h5>
+                      <ul class="ul-tabs">
+                        <li>• Helps to i nfiltrate rain & stormwater runoff </li>
+                        <li>• Increases the efficiency Of water management. </li>
+                        <li>• Retains water within its structure, allows evaporation & helps to mitigate "Urban Heat Island Effect"</li>
+                        <li>• Slip resistant (Rll- R12) </li>
+                        <li>• Colourfast, Colours of Cerapaver can last for many years </li>
+                        <li>• Available in 7 attractive colou rs ( Please contact us if colours not stated here)</li>
+                        <li>• Range Of Sizes, include Large format </li>
+                      </ul>
+
+                      <h5>Additional features</h5>
+                      <ul class="ul-tabs">
+                        <li>• Reduce cost of installing drainage </li>
+                        <li>• Allows infiltration into ground and assist in replenishing ground water.</li>
+                        <li>• Removes pollutant such as Nitrates, Phosphate & heavy metal from storm water run-off. </li>
+                        <li>• Provide water supply to trees & Landscape area, reduce flooding </li>
+                        <li>• Absorbs sound and reduce traffic noise due to its porous structure of Cerapaver </li>
+                        <li>• Can be recycled and reused on other sites </li>
+                        <li>• Easy to maintain (power wash when necessary) </li>
+                        <li>• More Cost effective than a Iternative materials</li>
+                      </ul>
+
+                      <h5>Cerapaver are prefect for range of application</h5>
+                      <ul class="ul-tabs">
+                        <li>• Car parks, footpaths, jogging paths, neighbourhood parks & Connectors. public & private plazas/courtyards, pool area, roof terraces, public spaces. Green building projects.</li>
+                        <li>• Driveways for residential homes & multi-dwelling developments </li>
+                        <li>• Commercial & industrial storage facilities</li>
+                        <li>Build Plus Private Ltd has an exclusive agreement with LVDAO Technology Co.,Ltd. to market and supply Eco Friendly Ceramic permeable paver in Singapore as "Cerapaver".</li>
+                      </ul>
+
+
+
+
+                    </div>
+
+                    <div class="col-sm-4">
+                      <img src="image/catalog/images/permeable/intro/1.jpg" class="perm-tab-img">
+                      <br>
+                      <img src="image/catalog/images/permeable/intro/2.jpg" class="perm-tab-img">
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
-                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                    <div class="help-block"><?php echo $text_note; ?></div>
+                </div> -->
+              
+
+
+              <!-- SPECIFICATION TAB -->
+              <div class="tab-pane" id="tab-specification">
+
+                <?php if ($attribute_groups) { ?>
+                  <?php foreach ($attribute_groups as $attribute_group) { ?>
+                    <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+                      <?php if ($attr_id == 5) { ?>
+                          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                          <?php echo html_entity_decode($attribute['text'], ENT_QUOTES, 'UTF-8'); ?></td>
+                          <?php } ?>
+                      <?php } else {} ?>
+                    <?php } ?>
+                  <?php } ?>  
+
+                  <!-- <div class="tab-container">
+                  <div class="row">
+
+                    <div class="col-sm-5">
+                      <img src="image/catalog/images/permeable/specs/green-label.png" class="perm-tab-greenlabel">
+                      <h4 class="perm-specs-desc">Please contact us for a copy for our Green Label Certificate</h4>
+                      <br>
+                      <div class="col-xs-6">
+                         <img src="image/catalog/images/permeable/specs/image002.png" class="perm-specs-img">
+                      </div>
+                      <div class="col-xs-6">
+                        <img src="image/catalog/images/permeable/specs/image008.png" class="perm-specs-img">
+                      </div>
+                    
+                    </div>
+
+                    <div class="col-sm-7">
+                      <p>Cerapaver contains no hazardous substance and is certified by <strong> Green Label - Singapore </strong> to be enviromentally friendly Cerapaver is permeable ceramic paver manufactured from recycle ceramic.<br>
+                        * Sizes<br>
+                        * Colours<br>
+                        * Test Results<br>
+                      </p>
+
+                      <table id="specs-tab-table">
+                        <tbody>
+                          <tr >
+                            <th colspan="4">
+                              Weight of Cerapaver
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>Sizes (mm) *</td>
+                            <td>Weight per Piece</td>
+                            <td>No. of pieces /m2</td>
+                            <td>Weight /m2 (KG)</td>
+                          </tr>
+                          <tr>
+                            <td>200 x 100 x 55</td>
+                            <td>1.97 KG</td>
+                            <td>50 Pieces</td>
+                            <td>98.5 KG</td>
+                          </tr>
+                           <tr>
+                            <td>200 x 200 x 55</td>
+                            <td>3.80 KG</td>
+                            <td>25 Pieces</td>
+                            <td>95 KG</td>
+                          </tr>
+                           <tr>
+                            <td>300 x 150 x 55</td>
+                            <td>4.5 KG</td>
+                            <td>22.22 Pieces</td>
+                            <td>101.32 KG</td>
+                          </tr>
+                          <tr>
+                            <td>300 x 300 x 55</td>
+                            <td>9=8.90 KG</td>
+                            <td>11.11 Pieces</td>
+                            <td>98.89 KG</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
                   </div>
-                </div>
-                <div class="form-group required">
-                  <div class="col-sm-12">
-                    <label class="control-label"><?php echo $entry_rating; ?></label>
-                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                    <input type="radio" name="rating" value="1" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="2" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="3" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="4" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="5" />
-                    &nbsp;<?php echo $entry_good; ?></div>
-                </div>
-                <?php if ($site_key) { ?>
-                  <div class="form-group">
+                </div> -->
+              </div>
+
+
+              <?php if ($tab_gallery) { ?>
+              <div class="tab-pane" id="tab-gallery">
+
+              <?php echo $content_bottom; ?>
+
+
+              </div>
+              <?php } ?>
+
+               <!--  <form class="form-horizontal" id="form-review">
+                  <div id="review"></div>
+                  <h2><?php echo $text_write; ?></h2>
+                  <?php if ($review_guest) { ?>
+                  <div class="form-group required">
                     <div class="col-sm-12">
-                      <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
+                      <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+                      <input type="text" name="name" value="" id="input-name" class="form-control" />
                     </div>
                   </div>
-                <?php } ?>
-                <div class="buttons clearfix">
-                  <div class="pull-right">
-                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                  <div class="form-group required">
+                    <div class="col-sm-12">
+                      <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+                      <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                      <div class="help-block"><?php echo $text_note; ?></div>
+                    </div>
                   </div>
-                </div>
-                <?php } else { ?>
-                <?php echo $text_login; ?>
-                <?php } ?>
-              </form> -->
-
-
-
+                  <div class="form-group required">
+                    <div class="col-sm-12">
+                      <label class="control-label"><?php echo $entry_rating; ?></label>
+                      &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+                      <input type="radio" name="rating" value="1" />
+                      &nbsp;
+                      <input type="radio" name="rating" value="2" />
+                      &nbsp;
+                      <input type="radio" name="rating" value="3" />
+                      &nbsp;
+                      <input type="radio" name="rating" value="4" />
+                      &nbsp;
+                      <input type="radio" name="rating" value="5" />
+                      &nbsp;<?php echo $entry_good; ?></div>
+                  </div>
+                  <?php if ($site_key) { ?>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
+                      </div>
+                    </div>
+                  <?php } ?>
+                  <div class="buttons clearfix">
+                    <div class="pull-right">
+                      <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                    </div>
+                  </div>
+                  <?php } else { ?>
+                  <?php echo $text_login; ?>
+                  <?php } ?>
+                </form> -->
+        </div>
       </div>
-        <?php if ($column_left && $column_right) { ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } elseif ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
         <?php $class = 'col-sm-4'; ?>
-        <?php } ?>
+        <?php } ?> -->
 
-        <div class="<?php echo $class; ?>">
+        <!-- <div class="<?php echo $class; ?>">
           <div class="btn-group">
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
@@ -494,7 +626,7 @@
               <?php } ?>
               <?php } ?>
               <a href="" onclick="$('a[href=\'#tab-gallery\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-gallery\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
-            <hr>
+            <hr> -->
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
@@ -503,6 +635,7 @@
           <?php } ?>
         </div>
       </div>
+
       <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
 
@@ -579,6 +712,249 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+<?php 
+} elseif($page_route == "product/product" && $product_route == "54"){ ?>
+
+<!-- PRODUCT GLASS BLOCKS -->
+<div class="container">
+
+  <ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php } ?>
+  </ul>
+
+  <div class="tab-container">
+    <div class="row"><?php echo $column_left; ?>
+      <?php if ($column_left && $column_right) { ?>
+      <?php $class = 'col-sm-6'; ?>
+      <?php } elseif ($column_left || $column_right) { ?>
+      <?php $class = 'col-sm-9'; ?>
+      <?php } else { ?>
+      <?php $class = 'col-sm-12'; ?>
+      <?php } ?>
+
+      <div id="content" class="<?php echo $class; ?>">
+
+        <img src="image/catalog/images/glass/banner.jpg" class="specs-banner">
+
+        <div class="col-sm-8 float-none pad-0">
+          <h2 class="product-title-lg"><?php echo $heading_title; ?></h2>
+          <?php if ($description) { ?>
+          <?php echo $description; ?>
+          <?php } ?>
+        </div>
+
+        <hr>
+
+        <!-- INSULATING CLEAR GLASS BLOCKS -->
+        <div class="tab-sections">
+          <?php if ($attribute_groups) { ?>
+          <!-- <?php debug($attribute_groups); ?> -->
+          <?php foreach ($attribute_groups as $attribute_group) { ?>
+          <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+          <?php if ($attr_id == 6) { ?>
+          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+          <?php if($attribute['attribute_id'] == 15) { ?>
+            
+            <h5 class="glass-section-title ">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p>All blocks can be sandblasted on one or both sides</p>
+
+            <div class="tab-image-container clearfix">
+              <div class="col-sm-4">
+                <img src="image/catalog/images/glass/image020.jpg" class="img-responsive tab-image-glass" >
+              </div>
+              <div class="col-sm-4">
+                <img src="image/catalog/images/glass/image022.jpg" class="img-responsive tab-image-glass" >
+              </div>
+              <div class="col-sm-4">
+                <img src="image/catalog/images/glass/image024.jpg" class="img-responsive tab-image-glass" >
+              </div>
+            </div>
+
+
+            <div class="dimensions-box">
+              <h6 class="dimensions-title">Available sizes for glass blocks: </h6>
+              <p class="">
+                190 x 190 x 50mm, 190 x 190 x 80mm, 190 x 190 x100mm<br>
+                240 x 240 x80mm, 300 x 300 x100mm, 240 x 115 x80mm<br>
+                115 x 115 x 80mm<br>
+              </p>
+
+              <p>Please do contact us for Stock availability</p>
+            </div>
+
+            <div class="enquire-btn-box">
+              <a class="btn enquire-btn">Enquiry Now</a>
+            </div>
+
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+        </div>
+
+        <hr>
+        
+
+        <!-- INSULATING COLOUR GLASS BLOCKS -->
+        <div class="tab-sections">
+          <?php if ($attribute_groups) { ?>
+          <!-- <?php debug($attribute_groups); ?> -->
+          <?php foreach ($attribute_groups as $attribute_group) { ?>
+          <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+          <?php if ($attr_id == 6) { ?>
+          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+          <?php if($attribute['attribute_id'] == 16) { ?>
+            
+            <h5 class="glass-section-title ">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p>All blocks can be sandblasted on one or both sides</p>
+
+            <div class="tab-image-container clearfix">
+                <img src="image/catalog/images/glass/image026.jpg" class="img-responsive" >
+            </div>
+
+
+            <div class="dimensions-box">
+              <h6 class="dimensions-title">Available sizes for glass blocks: </h6>
+              <p>
+                190 x 190 x 80mm
+              </p>
+
+              <p>Please do contact us for Stock availability</p>
+            </div>
+
+            <div class="enquire-btn-box">
+              <a class="btn enquire-btn">Enquiry Now</a>
+            </div>
+
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+        </div>
+
+        <hr>
+
+
+        <!-- SKY GLASS PAVER -->
+        <div class="tab-sections">
+          <?php if ($attribute_groups) { ?>
+          <!-- <?php debug($attribute_groups); ?> -->
+          <?php foreach ($attribute_groups as $attribute_group) { ?>
+          <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+          <?php if ($attr_id == 6) { ?>
+          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+          <?php if($attribute['attribute_id'] == 17) { ?>
+            
+            <h5 class="glass-section-title ">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p>Our glass paver are made of pressed glass, single or double-walled glass pavers can stand heavy loads. Designed to be constructed horizontally, floor or ceiling. It can be laid in many ways, aligned, group individually in a star patter. It creates a decorative inlet of light bringin both luminosity and style to a building.</p>
+
+            <div class="tab-image-container clearfix">
+              <div class="col-sm-5 flex">
+                <img src="image/catalog/images/glass/image030.jpg" class="img-responsive tab-image-glass" >
+              </div>
+              <div class="col-sm-5 flex">
+                <img src="image/catalog/images/glass/image028.jpg" class="img-responsive tab-image-glass" >
+              </div>
+            </div>
+
+
+            <div class="dimensions-box">
+              <h6 class="dimensions-title">Available sizes for glass blocks: </h6>
+              <p>
+                190 x 190 x 80mm
+              </p>
+
+              <p>Please do contact us for Stock availability</p>
+            </div>
+
+            <div class="enquire-btn-box">
+              <a class="btn enquire-btn">Enquiry Now</a>
+            </div>
+
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+        </div>
+
+        <hr>
+
+
+        <!-- PC VENTILATION BLOCKS WITH STAINLESS STEEL MESH -->
+        <div class="tab-sections">
+          <?php if ($attribute_groups) { ?>
+          <!-- <?php debug($attribute_groups); ?> -->
+          <?php foreach ($attribute_groups as $attribute_group) { ?>
+          <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+          <?php if ($attr_id == 6) { ?>
+          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+          <?php if($attribute['attribute_id'] == 18) { ?>
+            
+            <h5 class="glass-section-title ">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+
+            <div class="tab-image-container clearfix">
+              <div class="col-sm-3 flex">
+                <img src="image/catalog/images/glass/image035.jpg" class="img-responsive tab-image-glass" >
+              </div>
+              <div class="col-sm-3 flex">
+                <img src="image/catalog/images/glass/image036.jpg" class="img-responsive tab-image-glass" >
+              </div>
+              <div class="col-sm-3 flex">
+                <img src="image/catalog/images/glass/image032.jpg" class="img-responsive tab-image-glass" >
+              </div>
+            </div>
+
+
+            <div class="dimensions-box">
+              <h6 class="dimensions-title">Available sizes for glass blocks: </h6>
+              <p>
+                190 x 190 x 80mm
+              </p>
+
+              <p>Please do contact us for Stock availability</p>
+            </div>
+
+            <div class="enquire-btn-box">
+              <a class="btn enquire-btn">Enquiry Now</a>
+            </div>
+
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+          <?php } ?>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<?php }
+} ?>
+
+
+
 <script type="text/javascript"><!--
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
   $.ajax({
@@ -715,8 +1091,8 @@ $('button[id^=\'button-upload\']').on('click', function() {
     }
   }, 500);
 });
-//--></script>
-<script type="text/javascript"><!--
+</script>
+<script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
   e.preventDefault();
 

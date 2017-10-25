@@ -23,6 +23,9 @@ $_['products_title']     			= 'Product';
 $_['project_references_title']     	= 'Project References';
 $_['special_deals_title']     	   	= 'Special Deals';
 $_['product_permeable_title']	   	= 'Permeable Ceramic Raver';
+$_['product_glassblock_title']	   	= 'Glass Blocks';
+$_['product_tiles_title']	   		= 'Tiles';
+$_['product_tactiles_title']	   	= 'Tactiles';
 
 
 

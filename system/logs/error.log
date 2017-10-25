@@ -21,3 +21,6 @@
 2017-10-24 16:54:58 - PHP Notice:  Undefined variable: option in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 73
 2017-10-24 18:09:28 - PHP Notice:  Use of undefined constant specification - assumed 'specification' in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 135
 2017-10-24 18:09:28 - PHP Notice:  Undefined variable: tab in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 135
+2017-10-25 14:01:55 - PHP Notice:  Undefined variable: attribute in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 66
+2017-10-25 14:23:16 - PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\opencart\buildplus\admin\model\catalog\gallimage.php on line 19
+2017-10-25 14:46:35 - PHP Notice:  Undefined variable: gallalbums in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\product.tpl on line 323

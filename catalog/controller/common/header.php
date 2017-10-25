@@ -98,6 +98,11 @@ class ControllerCommonHeader extends Controller {
 		$data['product_permeable_link'] = $this->url->link('product/product&product_id=53');
 		$data['product_permeable_title'] = $this->language->get('product_permeable_title');
 
+		$data['product_glassblock_link'] = $this->url->link('product/product&product_id=54');
+		$data['product_glassblock_title'] = $this->language->get('product_glassblock_title');
+
+
+
 		$status = true;
 
 		if (isset($this->request->server['HTTP_USER_AGENT'])) {

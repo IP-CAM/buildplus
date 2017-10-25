@@ -232,10 +232,10 @@
 
 
 
-                              <li class="dropdown"><a <?php echo (isset($route) && $route=="product/category") ? 'class="active "' : '' ; ?>><?php echo $products_title; ?></a>
+                              <li class="dropdown"><a <?php echo (isset($route) && $route=="product/product") ? 'class="active "' : '' ; ?>><?php echo $products_title; ?></a>
                                  <ul class="dropdown-menu product-dropdown">
-                                    <li><a href="<?php echo $product_permeable_link; ?>" <?php echo (isset($route) && $route=="product/category") ? 'class="active"' : '' ; ?>><?php echo $product_permeable_title; ?></a></li>
-                                    <li><a href="#">GLASS BLOCKS</a></li>
+                                    <li><a href="<?php echo $product_permeable_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_permeable_title; ?></a></li>
+                                    <li><a href="<?php echo $product_glassblock_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_glassblock_title; ?></a></li>
                                     <li><a href="#">TILES</a></li>
                                     <li><a href="#">NATURAL STONE +</a></li>
                                     <li><a href="#">MOSAIC</a></li>
