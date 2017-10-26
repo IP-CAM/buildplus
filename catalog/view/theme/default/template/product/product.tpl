@@ -53,8 +53,6 @@ if(isset($_GET)) {
               </ul>
               <?php } ?>
             </div>
-              
-
           </div>
 
           <div class="col-sm-6 desc">
@@ -311,14 +309,13 @@ if(isset($_GET)) {
               </div>
 
 
-              <?php if ($tab_gallery) { ?>
+              <!-- GALLERY TAB -->
               <div class="tab-pane" id="tab-gallery">
+                <!-- <?php echo $content_bottom; ?> -->
 
-              <?php echo $content_bottom; ?>
-
-
+                asdsad
               </div>
-              <?php } ?>
+              
 
                <!--  <form class="form-horizontal" id="form-review">
                   <div id="review"></div>
@@ -946,9 +943,578 @@ if(isset($_GET)) {
 
 
   </div>
-
 </div>
 
+
+<?php 
+} elseif($page_route == "product/product" && $product_route == "55"){ ?>
+
+<!-- HOMOGENOUS TILES -->
+<div class="container">
+
+  <ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php } ?>
+  </ul>
+
+  
+  <div class="row">
+    <?php echo $column_left; ?>
+    <?php if ($column_left && $column_right) { ?>
+    <?php $class = 'col-sm-6'; ?>
+    <?php } elseif ($column_left || $column_right) { ?>
+    <?php $class = 'col-sm-9'; ?>
+    <?php } else { ?>
+    <?php $class = 'col-sm-12'; ?>
+    <?php } ?>
+
+    <div id="content" class="<?php echo $class; ?>">
+
+      <h2 class="product-title-lg"><?php echo $heading_title; ?></h2>
+      <?php if ($description) { ?>
+      <?php echo $description; ?>
+      <?php } ?>
+
+      <div class="tab-image-container clearfix">
+        <div class="row row-margin-5 ">
+          <div class="col-sm-6 pad-5 flex">
+            <img src="image/catalog/images/homo/left.jpg" class="img-responsive image-homo" >
+          </div>
+          <div class="col-sm-6 pad-5 flex">
+            <img src="image/catalog/images/homo/right.jpg" class="img-responsive image-homo" >
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-sections">
+        <?php if ($attribute_groups) { ?>
+        <!-- <?php debug($attribute_groups); ?> -->
+        <?php foreach ($attribute_groups as $attribute_group) { ?>
+        <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+        <?php if ($attr_id == 7) { ?>
+        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+        <?php if($attribute['attribute_id'] == 19) { ?>
+
+          <div class="section-container mar-bot-2 mar-top-2 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/1.jpg" class="img-responsive image-homo" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/2.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/3.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<?php 
+} elseif($page_route == "product/product" && $product_route == "56"){ ?>
+
+<!-- MARBLE GRANITE -->
+<div id="marble-container" class="container">
+
+  <ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php } ?>
+  </ul>
+
+  
+  <div class="row">
+    <?php echo $column_left; ?>
+    <?php if ($column_left && $column_right) { ?>
+    <?php $class = 'col-sm-6'; ?>
+    <?php } elseif ($column_left || $column_right) { ?>
+    <?php $class = 'col-sm-9'; ?>
+    <?php } else { ?>
+    <?php $class = 'col-sm-12'; ?>
+    <?php } ?>
+
+    <div id="content" class="<?php echo $class; ?>">
+
+      <div class="tab-image-container clearfix">
+        <img src="image/catalog/images/marble/banner.jpg" class="specs-banner">
+
+      </div>
+
+      <div class="col-sm-10 float-none pad-0">
+        <h2 class="product-title-lg"><?php echo $heading_title; ?></h2>
+        <p class="mar-0">All blocks can be sandblasted on one or both sides</p>
+        <p class="mar-0">(Polished, Flamed, bush hammered, Horn, groove finish)</p>
+
+
+        <div id="marble-colors-container">
+                <?php foreach ($options as $option) { ?>
+                <?php if ($option['type'] == 'image') { ?>
+                  <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                    <div id="input-option<?php echo $option['product_option_id']; ?>">
+                      <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                      <div class="radio">
+                          <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail img-responsive" /> 
+                          <div>
+                            <strong><?php echo $option_value['name']; ?></strong>
+                          </div>
+                          <?php if ($option_value['price']) { ?>
+                          (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                          <?php } ?>
+                      </div>
+                      <?php } ?>
+                      <!-- <span><a class="link" href="">More ... </a></span> -->
+                    </div>
+                  </div>
+                <?php } }?>
+        </div>
+
+        <div class="enquire-btn-box">
+          <a class="btn enquire-btn">Enquiry Now</a>
+        </div>
+        
+      </div>
+
+
+
+      <div class="tab-sections">
+        <?php if ($attribute_groups) { ?>
+        <!-- <?php debug($attribute_groups); ?> -->
+        <?php foreach ($attribute_groups as $attribute_group) { ?>
+        <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+        <?php if ($attr_id == 7) { ?>
+        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+        <?php if($attribute['attribute_id'] == 19) { ?>
+
+          <div class="section-container mar-bot-2 mar-top-2 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/1.jpg" class="img-responsive image-homo" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/2.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/3.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<?php 
+} elseif($page_route == "product/product" && $product_route == "57"){ ?>
+
+<!-- TACTILES -->
+<div id="tactiles-container" class="container">
+
+  <ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php } ?>
+  </ul>
+
+  
+  <div class="row">
+    <?php echo $column_left; ?>
+    <?php if ($column_left && $column_right) { ?>
+    <?php $class = 'col-sm-6'; ?>
+    <?php } elseif ($column_left || $column_right) { ?>
+    <?php $class = 'col-sm-9'; ?>
+    <?php } else { ?>
+    <?php $class = 'col-sm-12'; ?>
+    <?php } ?>
+
+    <div id="content" class="<?php echo $class; ?>">
+
+      <div class="tab-image-container clearfix">
+        <img src="image/catalog/images/tactiles/banner.jpg" class="specs-banner">
+      </div>
+
+      <h2 class="product-title-lg"><?php echo $heading_title; ?></h2>
+      <?php if ($description) { ?>
+      <?php echo $description; ?>
+      <?php } ?>
+
+      <div class="tab-image-container clearfix">
+        <div class="row row-margin-5 mar-bot-2">
+          <div class="col-sm-2 pad-5 flex">
+
+            <div class="dimensions-box">
+              <h6 class="dimensions-title">Tactiles are used:</h6>
+              <p class="">
+                Road Crossing<br>
+                Bus Stops<br>
+                Ramps<br>
+                Walks<br>
+                Carparks / pavements<br>
+              </p>
+
+              <p>Please do contact us for Stock availability</p>
+            </div>
+
+          </div>
+          <div class="col-sm-5 pad-5 flex">
+            <img src="image/catalog/images/tactiles/left.jpg" class="img-responsive image-homo mar-bot-1" >
+          </div>
+          <div class="col-sm-5 pad-5 flex">
+            <img src="image/catalog/images/tactiles/right.jpg" class="img-responsive image-homo mar-bot-1" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Tactiles for visually impaired</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="image/catalog/images/tactiles/image066.jpg" class="img-responsive" >
+                <div class="center mar-top-1">
+                  <strong>STUDY</strong>
+                </div>
+              </div>
+              <div class="col-xs-6 dimensions-box">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Color :</h6>
+                  <p class="">
+                    Yellow<br>
+                    Black<br>
+                    Grey<br>
+                  </p>
+                  <h6 class="dimensions-title">Size :</h6>
+                  <p class="">
+                    300 x 300 mm<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <p>&nbsp;</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="image/catalog/images/tactiles/image065.jpg" class="img-responsive" >
+                <div class="center mar-top-1">
+                  <strong>DIRECTIONAL</strong>
+                </div>
+              </div>
+              <div class="col-xs-6 dimensions-box">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Color :</h6>
+                  <p class="">
+                    Yellow<br>
+                    Black<br>
+                    Grey<br>
+                  </p>
+                  <h6 class="dimensions-title">Size :</h6>
+                  <p class="">
+                    300 x 300 mm<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <p>&nbsp;</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <img src="image/catalog/images/tactiles/image062.jpg" class="img-responsive" >
+                <div class="center mar-top-1">
+                  <strong>PLAIN YELLOW TILES</strong>
+                </div>
+              </div>
+              <div class="col-xs-6 dimensions-box">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Available now</h6>
+                  <h6 class="dimensions-title">Size :</h6>
+                  <p class="">
+                    300 x 300 mm<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="enquire-btn-box mar-top-2">
+          <a class="btn enquire-btn">Enquiry Now</a>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="tab-sections">
+        <?php if ($attribute_groups) { ?>
+        <!-- <?php debug($attribute_groups); ?> -->
+        <?php foreach ($attribute_groups as $attribute_group) { ?>
+        <?php $attr_id = $attribute_group['attribute_group_id']; ?>
+        <?php if ($attr_id == 7) { ?>
+        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+        <?php if($attribute['attribute_id'] == 19) { ?>
+
+          <div class="section-container mar-bot-2 mar-top-2 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/1.jpg" class="img-responsive image-homo" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/2.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Soft Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="section-container mar-bot-2 mar-top-3 pad-0">
+            <h5 class="homo-section-title">
+              <?php echo html_entity_decode($attribute['name'], ENT_QUOTES, 'UTF-8'); ?>
+            </h5>
+            <p></p>
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="image/catalog/images/homo/3.jpg" class="img-responsive" >
+              </div>
+              <div class="col-sm-5">
+                <div class="dimensions-box">
+                  <h6 class="dimensions-title">Surface Finish: Rock / Polished: </h6>
+                    <table class="table-dimensions mar-bot-3 ">
+                      <tr><td>Size:</td><td>600 x 600 mm</td><td>Thickness: 10mm</td></tr>
+                      <tr><td colspan="1"></td><td>600 x 900 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>800 x 800 mm</td><td>               </td></tr>
+                      <tr><td colspan="1"></td><td>1200 x 600 mm</td><td>              </td></tr>
+                    </table>
+
+                    <div class="enquire-btn-box">
+                      <a class="btn enquire-btn">Enquiry Now</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+      </div>
+
+
+    </div>
+  </div>
+</div>
 
 <?php }
 } ?>

@@ -25,6 +25,7 @@ $_['special_deals_title']     	   	= 'Special Deals';
 $_['product_permeable_title']	   	= 'Permeable Ceramic Raver';
 $_['product_glassblock_title']	   	= 'Glass Blocks';
 $_['product_tiles_title']	   		= 'Tiles';
+$_['product_marble_title']	   		= 'Natural Stone +';
 $_['product_tactiles_title']	   	= 'Tactiles';
 
 

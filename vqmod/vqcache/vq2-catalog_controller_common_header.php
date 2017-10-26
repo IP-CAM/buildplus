@@ -95,12 +95,30 @@ $data['extra_tags'] = $this->document->getExtraTags();
 
 		$data['product_link'] = $this->url->link('product/category');
 		$data['products_title'] = $this->language->get('products_title');
+
+		$data['special_deals_link'] = $this->url->link('product/category');
+		$data['special_deals_title'] = $this->language->get('special_deals_title');
+
+		$data['project_references_link'] = $this->url->link('information/information&information_id=10');
+		$data['project_references_title'] = $this->language->get('project_references_title');
+
+
+
 		
 		$data['product_permeable_link'] = $this->url->link('product/product&product_id=53');
 		$data['product_permeable_title'] = $this->language->get('product_permeable_title');
 
 		$data['product_glassblock_link'] = $this->url->link('product/product&product_id=54');
 		$data['product_glassblock_title'] = $this->language->get('product_glassblock_title');
+
+		$data['product_tiles_link'] = $this->url->link('product/product&product_id=55');
+		$data['product_tiles_title'] = $this->language->get('product_tiles_title');
+
+		$data['product_marble_link'] = $this->url->link('product/product&product_id=56');
+		$data['product_marble_title'] = $this->language->get('product_marble_title');
+
+		$data['product_tactiles_link'] = $this->url->link('product/product&product_id=57');
+		$data['product_tactiles_title'] = $this->language->get('product_tactiles_title');
 
 
 

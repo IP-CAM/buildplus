@@ -1743,6 +1743,10 @@ h2.price {
 	display: none;
 }
 
+.breadcrumb > li:first-child {
+	padding-left: 0;
+}
+
 
 .navbar-header {
     position: absolute;
@@ -1779,11 +1783,28 @@ h2.price {
 	text-transform: uppercase;
 }
 
+.homo-section-title {
+	font-family: 'Raleway';
+	letter-spacing: 0.075em;
+	font-size: 17px;
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1.5em;
+}
+
 .tab-image-glass {
 	max-height: 260px;
 	object-fit: contain;
 	width: 100%;
 	height: 100%;
+	margin-bottom: 1.5em;
+}
+
+.image-homo {
+	max-height: 300px;
+	object-fit: cover;
+	width: 100%;
 	margin-bottom: 1.5em;
 }
 
@@ -1806,8 +1827,8 @@ h2.price {
 	margin-top: 0;
 	margin-bottom: 1.5em;
 	line-height: 20px;
-}
 
+}
 .dimensions-box {
 	margin-bottom: 3em;
 }
@@ -1818,10 +1839,225 @@ h2.price {
 
 }
 
+.cover {
+	object-fit: cover !important;
+}
 
+.row-margin-5 {
+	margin-right: -5px;
+	margin-left: -5px;
+}
 
+.pad-5 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
 
+.table-dimensions tr {
+	border: none;
+}
 
+.table-dimensions td {
+	padding: 0 10px;
+	border: none;
+	text-align: left;
+}
+
+.table-dimensions td:first-child {
+	padding-left: 0;
+	padding-right: 2.5px;
+}
+
+.mar-bot-1 {
+	margin-bottom: 1em;
+}
+
+.mar-bot-2 {
+	margin-bottom: 2em;
+}
+
+.mar-bot-3 {
+	margin-bottom: 3em;
+}
+
+.mar-0 {
+	margin: 0;
+}
+
+.mar-top-0 {
+	margin-top: 0;
+}
+
+.mar-top-1 {
+	margin-top: 1em;
+}
+
+.mar-top-2 {
+	margin-top: 2em;
+}
+
+.mar-top-3 {
+	margin-top: 3em;
+}
+
+#marble-container .product-title-lg {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
+#marble-colors-container {
+	margin: 3.5em 0;
+}
+
+#input-option228 .radio {
+	display: inline-block;
+	text-align: center;
+	margin-right: 15px;
+	margin-top: 0;
+	height: 200px;
+    width: 250px;
+    margin-bottom: 3.5em;
+}
+
+#input-option228 .img-thumbnail {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin: 0 auto;
+    max-height: 200px;
+    max-width: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+#tactiles-container {
+	padding-bottom: 10em;
+}
+
+#tactiles-container .img-responsive {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#tactiles-container .dimensions-box {
+	margin-bottom: 0;
+}
+
+.cat-title {
+	font-size: 24px;
+	font-family: 'Raleway';
+	letter-spacing: 0.035em;
+	font-weight: bolder;
+}
+
+.row-category {
+	margin-top: 2em;
+}
+
+.left-category .list-group > a {
+    border: none;
+    color: #333;
+    padding: 5px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.075em;
+}
+
+.list-group a.active, 
+.list-group a.active:hover, 
+.list-group a:hover {
+    color: #0d286f !important;
+    background: transparent;
+    text-shadow: none;
+    border: none;
+    font-weight: bolder;
+}
+
+.divider {
+	margin: 15px 0;
+}
+
+.product-title {
+ 	margin-top: 0;
+}
+
+.product-title > a {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+ 	color: #333;
+ 	letter-spacing: 0.075em;
+ 	text-transform: uppercase;
+ 	font-weight: 500;
+}
+
+.product-thumb {
+    background-color: #f7f7f7;
+    padding: 2em 1em;
+}
+
+.product-thumb .caption {
+    padding: 0 20px;
+    min-height: 180px;
+}
+
+.price > .price_text {
+	font-family: 'Source Sans Pro';
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.price {
+	margin-top: 1.5em;
+	font-family: 'Source Sans Pro';
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.product-thumb .image img {
+    border: 1px solid #7c7769;
+}
+
+.enquire-btn-white {
+    color: #333;
+    text-shadow: none;
+    background-color: #fff;
+    background-image: unset;
+    border: 1px solid #e1e1e1;
+    border-radius: unset;
+    box-shadow: none;
+    height: 40px;
+    width: 150px;
+    padding: 10px 15px;
+}
+
+.enquire-btn-white:hover {
+	background-color: #0d286f;
+	color: #fff;
+}
+
+.product-pagination {
+	margin-bottom: 5em;
+	margin-top: 3em;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #0d286f;
+    border-color: #0d286f;
+}
 
 
 

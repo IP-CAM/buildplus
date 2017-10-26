@@ -236,19 +236,21 @@
                                  <ul class="dropdown-menu product-dropdown">
                                     <li><a href="<?php echo $product_permeable_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_permeable_title; ?></a></li>
                                     <li><a href="<?php echo $product_glassblock_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_glassblock_title; ?></a></li>
-                                    <li><a href="#">TILES</a></li>
-                                    <li><a href="#">NATURAL STONE +</a></li>
-                                    <li><a href="#">MOSAIC</a></li>
-                                    <li><a href="#">TACTILES</a></li>
+
+                                    <li><a href="<?php echo $product_tiles_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_tiles_title; ?></a></li>
+
+                                    <li><a href="<?php echo $product_marble_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_marble_title; ?></a></li>
+                                    <li><a>MOSAIC</a></li>
+                                    <li><a href="<?php echo $product_tactiles_link; ?>" <?php echo (isset($route) && $route=="product/product") ? 'class="active"' : '' ; ?>><?php echo $product_tactiles_title; ?></a></li>
                                 </ul>
 
                               </li>
 
                               <li><a href="<?php echo $services; ?>" <?php echo (isset($route) && $route=="information/information&information_id=7") ? 'class="active"' : '' ; ?>><?php echo $services_title; ?></a></li>
 
-                              <li><a href="<?php echo $services; ?>" <?php echo (isset($route) && $route=="information/information&information_id=7") ? 'class="active"' : '' ; ?>><?php echo "Project References" ?></a></li>
+                              <li><a href="<?php echo $project_references_link; ?>" <?php echo (isset($route) && $route=="information/information&information_id=10") ? 'class="active"' : '' ; ?>><?php echo $project_references_title; ?></a></li>
 
-                               <li><a href="<?php echo $services; ?>" <?php echo (isset($route) && $route=="information/information&information_id=7") ? 'class="active"' : '' ; ?>><?php echo "Special Deals" ?></a></li>
+                               <li><a href="<?php echo $special_deals_link; ?>" <?php echo (isset($route) && $route=="/product/category") ? 'class="active"' : '' ; ?>><?php echo $special_deals_title; ?></a></li>
 
                                <li><a href="<?php echo $contact; ?>" <?php echo (isset($route) && $route=="information/contact") ? 'class="active"' : '' ; ?>><?php echo $text_contact; ?></a></li>
                            </ul>
