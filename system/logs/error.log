@@ -90,3 +90,8 @@
 2017-10-26 14:17:57 - PHP Notice:  Undefined variable: special_link_title in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 253
 2017-10-26 14:27:39 - PHP Notice:  Undefined variable: special_deals_title in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 15
 2017-10-26 14:28:34 - PHP Notice:  Undefined variable: special_deals_title in C:\xampp\htdocs\opencart\buildplus\catalog\view\theme\default\template\product\category.tpl on line 9
+2017-10-27 9:34:31 - PHP Notice:  Undefined variable: error_name in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 76
+2017-10-27 9:34:31 - PHP Notice:  Undefined variable: error_email in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 82
+2017-10-27 9:34:31 - PHP Notice:  Undefined variable: error_contact in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 90
+2017-10-27 9:34:31 - PHP Notice:  Undefined variable: error_enquiry in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 101
+2017-10-27 9:34:31 - PHP Notice:  Undefined variable: site_key in C:\xampp\htdocs\opencart\buildplus\vqmod\vqcache\vq2-catalog_view_theme_default_template_common_header.tpl on line 106

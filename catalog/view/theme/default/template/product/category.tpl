@@ -145,7 +145,7 @@
                 <?php } ?>
 
                   <div class="enquire-btn-box mar-top-3">
-                    <a class="btn enquire-btn-white">Enquiry Now</a>
+                    <a class="btn enquire-btn-white" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                   </div>
               </div>
 

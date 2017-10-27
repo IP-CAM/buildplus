@@ -50,6 +50,146 @@
 <body class="<?php echo $class; ?>">
 
 
+<?php
+
+   $get_route = $_GET['route'];
+
+   if(isset($_GET['route'])){
+      if($get_route == "common/home"){
+         ?>
+            <div class="home-banner">
+
+               <div class="home-banner-title-sm"><h2>SPECIALISED IN</h2></div>
+               <div class="home-banner-title-lg">
+                  <h1>
+                     BUILDING PRODUCTS & CONTRACT SERVICES
+                  </h1>
+               </div>
+
+            </div>
+         <?php
+      }
+   }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div id="modal-contact-form" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+   <a data-dismiss="modal" class="x-button">
+     <img src="image/catalog/images/permeable/gallery/x.png">
+  </a>
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+       
+      
+
+
+<div class="contact-form-container">
+<div class="row">
+<div class="col-sm-8">
+<p class="mar-bot-2">We'd love to hear from you! Please fill our form below and we'll contact you as soon as possible.</p>
+</div>
+</div>
+</div>
+
+<form class="form-horizontal" enctype="multipart/form-data" id="contact-page-form" method="post">
+<!-- <fieldset> -->
+<div class="row row-bp">
+<div class="col-sm-6">
+<div class="form-group required"><input class="form-control bp-control" id="input-name" name="name" placeholder="* Name" type="text" /> <!--?php if ($error_name) { ?-->
+<div class="text-danger"><!--?php echo $error_name; ?--></div>
+<!--?php } ?--></div>
+</div>
+
+<div class="col-sm-6">
+<div class="form-group required"><input class="form-control bp-control" id="input-email" name="email" placeholder="* Email" type="text" /> <!--?php if ($error_email) { ?-->
+<div class="text-danger"><!--?php echo $error_email; ?--></div>
+<!--?php } ?--></div>
+</div>
+</div>
+
+<div class="row row-bp">
+<div class="col-sm-6">
+<div class="form-group required"><input class="form-control bp-control" id="input-contact" name="contact" placeholder="* Contact No." type="text" /> <!--?php if ($error_contact) { ?-->
+<div class="text-danger"><!--?php echo $error_contact; ?--></div>
+<!--?php } ?--></div>
+</div>
+
+<div class="col-sm-6">
+<div class="form-group required"><input class="form-control bp-control" id="input-company" name="company" placeholder="Company" type="text" /></div>
+</div>
+</div>
+
+<div class="col-sm-12">
+<div class="form-group required"><textarea class="form-control bp-control" id="input-enquiry" name="enquiry" placeholder="* Message" rows="5"></textarea><!--?php if ($error_enquiry) { ?-->
+
+<div class="text-danger"><!--?php echo $error_enquiry; ?--></div>
+<!--?php } ?--></div>
+</div>
+<!--?php if ($site_key) { ?-->
+
+
+<div class="row row-bp">
+<div class="form-group">
+<div class=" col-sm-6">
+
+   <div class="g-recaptcha" data-theme="light" data-sitekey="6Le_lBATAAAAAGxlKWMMz3o2xK9A_zVMAiKLbpEU" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;">&nbsp;
+   </div>
+<!--?php if ($error_captcha) { ?-->
+
+   <div class="text-danger"><!--?php echo $error_captcha; ?--></div>
+   <!--?php } ?-->
+
+</div>
+
+<div class=" col-sm-6">
+   <div class="buttons">
+   <div class="pull-right"><input class="btn btn-primary btn-bp" type="submit" value="submit" /></div>
+   <div class="pull-right"><input class="btn btn-primary btn-bp" type="reset" value="clear" /></div>
+   </div>
+</div>
+
+</div>
+</div>
+<!--?php } ?--><!-- </fieldset> -->
+
+
+</form>
+</div>
+
+</div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 <!-- <nav id="top">
    <div class="container">

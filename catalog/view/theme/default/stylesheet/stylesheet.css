@@ -1868,6 +1868,81 @@ h2.price {
 	padding-right: 2.5px;
 }
 
+.home-banner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 99;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.home-banner-title-sm > h2 {
+	font-family: 'Raleway';
+	font-size: 2em;
+	font-weight: 300;
+	letter-spacing: 0.3em;
+	text-align: center;
+	padding: 5px 20px;
+	color: #fff;
+	margin: 0;
+}
+
+.home-banner-title-lg > h1 {
+	font-family: 'Raleway';
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-align: center;
+	padding: 5px 20px;
+	color: #fff;
+	margin: 0;
+}
+
+.home-banner-title-sm {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+	margin-bottom: 1.5em;
+}
+
+.ms-skin-default .ms-bullet {
+    width: 10px;
+    height: 10px;
+    background: url('../images/dot-passive.png') no-repeat !important;
+    margin: 4px;
+    background-position: -34px -117px;
+    display: block !important;
+}
+
+.ms-skin-default .ms-bullet {
+    width: 25px !important;
+    height: 30px !important;
+}
+
+.ms-bullets-count {
+    position: relative;
+    right: -50%;
+    margin-bottom: 50px;
+}
+
+.ms-skin-default .ms-bullet-selected {
+    background-position: -34px -84px;
+    background: url('../images/dot-active.png') no-repeat !important;
+}
+
+.ms-bullet {
+	/*width: 120px !important;*/
+}
+
+.ms-nav-next {
+	display: none;
+}
+
+.ms-nav-prev {
+	display: none;
+}
+
 .mar-bot-1 {
 	margin-bottom: 1em;
 }
@@ -2060,17 +2135,55 @@ h2.price {
 }
 
 
+#modal-contact-form .modal-dialog{
+    max-width: 600px;
+    margin-left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+#modal-contact-form .contact-form-container {
+	margin: 0;
+}
 
+#modal-contact-form .modal-body {
+    position: relative;
+    padding: 2em;
+    padding-right: 3em;
+}
 
+#modal-contact-form .modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1px;
+    outline: 0;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+}
 
+#modal-contact-form .btn-bp {
+    min-width: 110px;
+    height: 45px;
+} 
 
+#modal-contact-form .buttons {
+	margin-top: 15px;
+}
 
+.x-button {
+    cursor: pointer;
+    z-index: 9;
+    left: 100%;
+    bottom: 100%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+}
 
-
-
-
-
+#rc-imageselect {transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;} 
 
 
 
@@ -2170,6 +2283,44 @@ h2.price {
 	    margin-top: 0;
 	    display: none;
 	}
+
+	#wwd .section-container {
+		padding-bottom: 0;
+	}
+
+	.home-section-1 {
+		padding: 3em 2.5em;
+	}
+
+	.home-section-2 {
+		padding: 3em 2.5em;
+	}
+
+	.home-section-3 {
+		padding: 0 2.5em;
+	}
+
+	.home-section-4 {
+	    padding: 10em 1.5em;
+	    padding-top: 11em;
+	}
+
+	.section-title-lg {
+	    letter-spacing: 6px;
+	}
+
+	.wwh-text {
+		font-size: 12px;
+	}
+
+	.wwh > img {
+		width: 80%;
+	}
+
+	.home-banner-title-lg > h1 {
+		width: 650px;
+	}
+
 
 }
 

@@ -104,7 +104,7 @@ if(isset($_GET)) {
                 <?php } }?>
 
                   <div class="enquire-btn-box">
-                    <a class="btn enquire-btn">Enquiry Now</a>
+                    <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                   </div>
 
               </div>
@@ -785,7 +785,7 @@ if(isset($_GET)) {
             </div>
 
             <div class="enquire-btn-box">
-              <a class="btn enquire-btn">Enquiry Now</a>
+              <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
             </div>
 
           <?php } ?>
@@ -828,7 +828,7 @@ if(isset($_GET)) {
             </div>
 
             <div class="enquire-btn-box">
-              <a class="btn enquire-btn">Enquiry Now</a>
+              <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
             </div>
 
           <?php } ?>
@@ -876,7 +876,7 @@ if(isset($_GET)) {
             </div>
 
             <div class="enquire-btn-box">
-              <a class="btn enquire-btn">Enquiry Now</a>
+              <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
             </div>
 
           <?php } ?>
@@ -927,7 +927,7 @@ if(isset($_GET)) {
             </div>
 
             <div class="enquire-btn-box">
-              <a class="btn enquire-btn">Enquiry Now</a>
+              <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
             </div>
 
           <?php } ?>
@@ -1016,7 +1016,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1045,7 +1045,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1074,7 +1074,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1152,7 +1152,7 @@ if(isset($_GET)) {
         </div>
 
         <div class="enquire-btn-box">
-          <a class="btn enquire-btn">Enquiry Now</a>
+          <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
         </div>
         
       </div>
@@ -1188,7 +1188,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1217,7 +1217,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1246,7 +1246,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1404,7 +1404,7 @@ if(isset($_GET)) {
         </div>
 
         <div class="enquire-btn-box mar-top-2">
-          <a class="btn enquire-btn">Enquiry Now</a>
+          <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
         </div>
 
         </div>
@@ -1439,7 +1439,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1468,7 +1468,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
@@ -1497,7 +1497,7 @@ if(isset($_GET)) {
                     </table>
 
                     <div class="enquire-btn-box">
-                      <a class="btn enquire-btn">Enquiry Now</a>
+                      <a class="btn enquire-btn" data-toggle="modal" data-target="#modal-contact-form">Enquiry Now</a>
                     </div>
                 </div>
               </div>
